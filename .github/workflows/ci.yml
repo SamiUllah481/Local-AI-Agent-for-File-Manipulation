@@ -15,7 +15,7 @@ jobs:
     strategy:
       # Test with multiple Python versions to ensure compatibility
       matrix:
-        python-version: ['3.9', '3.10', '3.11', '3.12']
+        python-version: ['3.9', '3.10', '3.11', '3.12', '3.14']
     
     steps:
     # Step 1: Checkout the repository code

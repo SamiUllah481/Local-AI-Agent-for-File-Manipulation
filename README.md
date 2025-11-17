@@ -1,7 +1,7 @@
 # Local AI Agent with Ollama
 
 [![CI - Test and Validate](https://github.com/SamiUllah481/Local-AI-Agent-for-File-Manipulation/actions/workflows/ci.yml/badge.svg)](https://github.com/SamiUllah481/Local-AI-Agent-for-File-Manipulation/actions/workflows/ci.yml)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.9-3.14](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12%20|%203.14-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project demonstrates a local AI agent using Ollama to perform various operations on local files and GitHub repositories.
