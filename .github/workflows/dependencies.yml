@@ -1,0 +1,38 @@
+name: Dependency Check
+
+# Run weekly to check for dependency issues
+on:
+  schedule:
+    # Runs every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  check-dependencies:
+    name: Check Dependencies
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pip-audit
+    
+    - name: Check for security vulnerabilities
+      run: |
+        pip-audit --desc
+        echo "✅ Security audit completed"
+    
+    - name: List outdated packages
+      run: |
+        pip list --outdated
+        echo "ℹ️  Check above for packages that can be updated"
